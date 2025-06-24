@@ -498,7 +498,7 @@ const PricePreOrder: React.FC = () => {
                           <div className={styles.inputWrapper}>
                             <div className={classnames('textM-500', styles.topHint)}>Address</div>
                             <AddressAutocomplete
-                              apiKey="AIzaSyCkj4Y_ks_qbOTYlFktCK6ouVnNcNtvnv0"
+                              apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
                               requestOptions={{
                                 location: { lat: () => 43.6532, lng: () => -79.3832 },
                                 radius: 50000,
