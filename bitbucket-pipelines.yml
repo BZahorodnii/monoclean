@@ -1,0 +1,39 @@
+image: node:20
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Build, Clean, Deploy, and Clear Cache
+          caches:
+            - node
+          script:
+            # Install dependencies
+            - echo "Installing dependencies..."
+            - npm install
+
+            # Build React app
+            - echo "Building React app..."
+            - npm run build  # This should generate the dist/ folder with production files
+
+            # Install rsync
+            - echo "Installing rsync..."
+            - apt-get update && apt-get install -y rsync
+
+            # Decode SSH key from base64 and write to temp file
+            - echo "Decoding SSH Key from base64 and writing to temp file"
+            - echo "$SSH_KEY" | base64 -d > /tmp/ssh_key && chmod 600 /tmp/ssh_key
+
+            # Clean up old files and directories except 'images' and 'bundles'
+            - echo "Cleaning up old build files on the server..."
+            - ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@146.190.252.116 "
+              find /var/www/monoclean.ca/public/ -maxdepth 1 -type d ! -name 'public' ! -name 'image' ! -name 'bundles' -exec rm -rf {} \; &&
+              find /var/www/monoclean.ca/public/ -maxdepth 1 -type f ! -name 'index.php' ! -name 'robots.txt' -exec rm -f {} \;"
+
+            # Deploy the new files to the server using rsync
+            - echo "Starting Rsync deployment..."
+            - rsync -avz -e "ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./dist/ root@146.190.252.116:/var/www/monoclean.ca/public/
+
+            # Clear Symfony cache
+            - echo "Clearing Symfony cache..."
+            - ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@146.190.252.116 "cd /var/www/monoclean.ca && php bin/console cache:clear"

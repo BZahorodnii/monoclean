@@ -1,0 +1,115 @@
+.container {
+  margin-bottom: var(--clamp11);
+}
+
+.title {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 45px;
+  line-height: 49px;
+  color: var(--black);
+  margin-bottom: calc(var(--clamp7) - 8px);
+  text-align: center;
+}
+
+.testimonialCity {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: var(--clamp4);
+}
+
+.testimonialsCarousel {
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.testimonialItem {
+  display: flex;
+  width: 100%;
+  padding: 14px 32px;
+}
+
+.testimonialItemInner {
+  width: 100%;
+  text-align: center;
+  border-radius: var(--br-m);
+  padding: var(--clamp4);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialsWrapper {
+  position: relative;
+}
+
+.testimonialName {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -3%;
+  color: var(--black);
+  margin-top: var(--clamp4);
+  margin-bottom: var(--clamp4);
+}
+
+.testimonialText {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5D5D5D;
+  margin-bottom: var(--clamp4);
+  /* max-height: 50px; */
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  position: relative; */
+}
+
+.testimonialButton {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-highlight);
+  /* position: absolute; */
+  bottom: 0;
+  right: 0;
+  background: #f9f9f9;
+  border: none;
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+
+.arrowWrapper {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrowWrapperLeft {
+  left: -20px;
+}
+
+.arrowWrapperRight {
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-bottom: var(--clamp5);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

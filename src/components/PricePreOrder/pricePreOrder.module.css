@@ -1,0 +1,528 @@
+.wrapper {
+  max-width: var(--max-width);
+  padding: 0 var(--clamp4);
+  margin: 0 auto var(--clamp4);
+  color: var(--text-primary);
+  margin-bottom: var(--clamp8);
+}
+
+.wrapperContainer {
+  background-color: #7C3AED0D;
+  padding: var(--clamp7);
+  border-radius: var(--br-m);
+  border: 2px solid #0000000D;
+}
+
+.wrapperIn {
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-between;
+  gap: var(--clamp4);
+}
+
+.stepsContainer {
+  flex: 1;
+  width: 50%;
+}
+
+.priceContainer {
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--clamp2);
+  margin-bottom: calc(var(--clamp6) - 4px);
+}
+
+.stepTitle {
+  font-family: Satoshi-Bold, sans-serif;  
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--bleck);
+  margin-bottom: 10px;
+}
+
+.stepText {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.formContainerFlex {
+  display: flex;
+  gap: var(--clamp3);
+}
+
+.input {
+  padding: 10px 12px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-primary);
+  font-weight: 500;
+  width: 100%;
+  border-radius: var(--br-xs);
+  border: 1px solid var(--lines-secondary);
+  background-color: var(--white);
+}
+
+.inputWrapper {
+  flex: 1;
+  margin-bottom: calc(var(--clamp3) + 2px);
+}
+
+.checkboxWrapper {
+  margin-bottom: var(--clamp4);
+  margin-top: 4px;
+}
+
+.checkboxWrapperCampaign {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.checkoutTitle {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 45px;
+  line-height: 1.09;
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: calc(var(--clamp7) - 8px);
+  text-align: center;
+}
+
+.checkoutTitle span {
+  background: linear-gradient(to right, #003EB1, #FF00AA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.infoList {
+  padding: 0;
+  margin: 0;
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 17px;
+  margin-bottom: var(--clamp4);
+}
+
+.infoList li {
+  margin-bottom: 12px;
+}
+
+.infoList span {
+  font-family: Satoshi-Bold, sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.priceInfoContainer {
+  padding: var(--clamp4);
+  border-radius: var(--br-m);
+  background-color: #7C3AED1A;
+  margin-top: 6px;
+  margin-bottom: var(--clamp4);
+}
+
+.regularPriceText {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #676767;
+  margin-bottom: calc(var(--clamp3) - 4px);
+}
+
+.regularPriceValue {
+  font-family: Satoshi-Medium, sans-serif;
+  color: var(--black);
+  text-decoration: line-through;
+}
+
+.discountPriceText {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #7C3AED;
+  margin-bottom: 6px;
+}
+
+.priceSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--lines-secondary);
+  margin: var(--clamp4) 0;
+}
+
+.promoHint {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  color: #0EA400;
+  margin-bottom: calc(var(--clamp4) - 4px);
+}
+
+.priceContainerIn {
+  padding: var(--clamp5);
+  border-radius: var(--br-m);
+  background-color: #FFFFFF80;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.checkboxText {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.checkboxOffer {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--white);
+  background: linear-gradient(to right, rgb(60, 85, 239), rgb(235, 92, 139));
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.checkboxTextBold {
+  font-family: Satoshi-Bold, sans-serif;
+  font-weight: 700;
+}
+
+.checkoutHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: calc(var(--clamp1) - 2px);
+  margin-bottom: var(--clamp4);
+}
+
+.checkoutHeaderBackButton {
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.checkoutHeaderIcon {
+  margin-top: 4px;
+}
+
+.checkoutHeaderTitle {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.checkoutHeaderSubtitle {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #737373;
+}
+
+.topHint {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.errorMessage {
+  color: var(--text-error);
+  padding: 3px 0 0 var(--clamp4);
+}
+
+.stepIcon {
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #818181;
+  text-decoration: underline;
+  margin-bottom: 6px;
+}
+
+.addressAutocomplete {
+  width: 100%;
+}
+
+.addressAutocomplete :global(.MuiTextField-root) {
+  width: 100%;
+}
+
+.addressAutocomplete :global(.MuiInputLabel-root) {
+  color: var(--text-secondary);
+  transform: translate(24px, 18px) scale(1);
+}
+
+.addressAutocomplete :global(.MuiInputLabel-root.MuiFormLabel-filled) {
+  display: none;
+}
+
+.addressAutocomplete :global(.MuiInputLabel-root.Mui-focused) {
+  color: var(--text-secondary);
+  transform: translate(24px, 18px) scale(1);
+}
+
+.addressAutocomplete :global(.MuiOutlinedInput-root .MuiAutocomplete-input) {
+  padding: 7.5px 4px 7.5px 14px !important;
+}
+
+.addressAutocomplete :global(.MuiOutlinedInput-root) {
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  border-radius: var(--br-s);
+  padding: var(--clamp4) var(--clamp4);
+  transition: all ease-in-out .2s;
+}
+
+.addressAutocomplete :global(.MuiOutlinedInput-root.Mui-focused) {
+  border-color: var(--lines-brand);
+}
+
+.addressAutocomplete :global(.MuiOutlinedInput-notchedOutline) {
+  border: none;
+}
+
+.addressAutocomplete :global(.MuiInputBase-input) {
+  padding: 0;
+}
+
+.addressAutocomplete :global(.MuiAutocomplete-endAdornment) {
+  display: none;
+}
+
+.datePickerWrapper {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.datePickerWrapper :global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+.datePickerWrapper :global(.react-datepicker__input-container input) {
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  color: var(--text-primary);
+  border-radius: var(--br-s);
+  padding: var(--clamp3) var(--clamp4);
+  transition: all ease-in-out .2s;
+  width: 100%;
+  outline: none;
+}
+
+.datePickerWrapper :global(.react-datepicker) {
+  font-family: Satoshi-Regular, sans-serif;
+  border: 1px solid var(--lines-primary);
+  border-radius: var(--br-s);
+  background-color: var(--white);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.datePickerWrapper :global(.react-datepicker__header) {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--lines-primary);
+  border-top-left-radius: var(--br-s);
+  border-top-right-radius: var(--br-s);
+  padding: 12px;
+}
+
+.datePickerWrapper :global(.react-datepicker__current-month) {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.datePickerWrapper :global(.react-datepicker__day-name) {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  color: var(--text-secondary);
+  width: 26px;
+  margin: 4px;
+}
+
+.datePickerWrapper :global(.react-datepicker__day) {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  margin: 4px;
+  border-radius: var(--br-xs);
+}
+
+.datePickerWrapper :global(.react-datepicker__day:hover) {
+  background-color: #7C3AED1A;
+}
+
+.datePickerWrapper :global(.react-datepicker__day--selected) {
+  background-color: #7C3AED !important;
+  color: white !important;
+}
+
+.datePickerWrapper :global(.react-datepicker__time-container) {
+  border-left: 1px solid var(--lines-primary);
+}
+
+.datePickerWrapper :global(.react-datepicker__time-box) {
+  width: 100px;
+}
+
+.datePickerWrapper :global(.react-datepicker__time-list-item) {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  height: 36px;
+  line-height: 36px;
+  padding: 0 8px;
+  height: 44px !important;
+}
+
+.datePickerWrapper :global(.react-datepicker__time-list-item:hover) {
+  background-color: #7C3AED1A;
+}
+
+.datePickerWrapper :global(.react-datepicker__time-list-item--selected) {
+  background-color: #7C3AED !important;
+  color: white !important;
+}
+
+@media (max-width: 960px) {
+  .priceContainerIn {
+    padding:  var(--clamp4);
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapperContainer {
+    padding: var(--clamp4);
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .priceContainer {
+    width: 100%;
+  }
+
+  .checkoutTitle {
+    font-size: 28px;
+  }
+
+  .stepTitle {
+    font-size: 22px;
+  }
+
+  .stepText {
+    font-size: 16px;
+  }
+
+  .stepsContainer {
+    width: 100%;
+  }
+
+  .addressAutocomplete :global(.MuiInputLabel-root) {
+    padding: 5px !important;
+  }
+  
+  .addressAutocomplete :global(.MuiOutlinedInput-root) {
+    padding: 5px !important;
+  }
+
+  .addressAutocomplete :global(.MuiInputLabel-root) {
+    color: var(--text-secondary);
+    transform: translate(14px, 10px) scale(1) !important;
+    padding: 5px !important;
+  }
+  
+  .addressAutocomplete :global(.MuiInputLabel-root.MuiFormLabel-filled) {
+    display: none;
+  }
+  
+  .addressAutocomplete :global(.MuiInputLabel-root.Mui-focused) {
+    color: var(--text-secondary);
+    transform: translate(14px, 8px) scale(1);
+  }
+  
+  .addressAutocomplete :global(.MuiOutlinedInput-root .MuiAutocomplete-input) {
+    padding: 14px 4px 24px 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .formContainerFlex {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .infoList {
+    font-size: 14px;
+  }
+
+  .discountPriceText {
+    font-size: 24px;
+  }
+  .checkoutTitle img {
+    width: 24px;
+    max-width: 24px;
+  }
+
+  .checkboxWrapperCampaign {
+    flex-direction: column;
+  }
+  .button {
+    text-align: left;
+  }
+  .checkboxWrapperCampaign {
+    align-items: flex-start;
+  }
+}

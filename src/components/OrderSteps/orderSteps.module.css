@@ -1,0 +1,209 @@
+.container {
+  margin-bottom: var(--clamp8);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: var(--clamp7);
+}
+
+.step {
+  text-align: center;
+  width: 33%;
+  padding-bottom: var(--clamp5);
+}
+
+.step img {
+  max-width: 90%;
+}
+
+.stepTitle {
+  margin-bottom: var(--clamp2);
+  margin-top: var(--clamp2);
+}
+
+.steps {
+  position: relative;
+}
+
+.stepRow {
+  position: relative;
+}
+
+.stepRowIn {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.stepRowIn > div {
+  width: 50%;
+}
+
+.stepCard {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--white);
+  padding: var(--clamp4);
+  border-radius: var(--br-s);
+  box-shadow: var(--bs-1);
+  gap: calc(var(--clamp2) + 4px);
+}
+
+.stepCardRight {
+  margin-left: calc(var(--clamp4) + var(--clamp2));
+}
+
+.stepCardLeft {
+  margin-right: calc(var(--clamp4) + var(--clamp2));
+}
+
+.stapCardImage {
+  width: 139px;
+  min-width: 139px;
+}
+
+.stepTitleWraper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: calc(var(--clamp2) + 4px);
+}
+
+.dot {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  border-radius: var(--br-m);
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  box-shadow: 0px 8px 20px 0px #4055F440;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  background: var(--brand-blue-50);
+  border-radius: var(--br-m);
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+}
+
+.stepCardNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--background-brand);
+  border-radius: 50%;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+}
+
+.stepCardText {
+  color: var(--text-secondary);
+}
+
+.stepCardRight::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid var(--white);
+}
+
+.stepCardLeft::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-left:10px solid var(--white);
+}
+
+.stepsProgress {
+  position: absolute;
+  width: 6px;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+  border-radius: var(--br-s);
+  background: var(--lines-brand);
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+  }
+
+  .step {
+    width: 100%;
+  }
+
+  .stepsProgress {
+    width: 6px;
+    left: 12px;
+  }
+
+  .dot {
+    left: 12px;
+    margin: -12px 0 0 -12px;
+  }
+  
+  .dot::before {
+    left: 12px;
+    margin: -6px 0 0 -6px;
+  }
+
+  .stepRowIn {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .stepRowIn > div {
+    width: 100%;
+  }
+
+  .stepCardRight, .stepCardLeft {
+    margin-left: var(--clamp10);
+    margin-right: 0;
+  }
+  
+  .stepCardLeft::before {
+    left: -10px;
+    right: inherit;
+    border-right: 10px solid var(--white);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .stepCard {
+    flex-direction: column;
+  }
+
+  .stapCardImage {
+    width: 100%;
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,337 @@
+.inputWrapper {
+  position: relative;
+}
+
+.inputLabel {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.hint {
+  position: absolute;
+  top: 12px;
+  left: calc(var(--clamp4) - 8px);
+  padding: 4px 8px;
+  color: var(--text-secondary);
+  border-radius: var(--br-m);
+  border: 1px solid transparent;
+  transition: all ease-in-out .2s;
+  cursor: text;
+  z-index: 10;
+}
+
+.inputWrapper .hintActive, .inputWrapper .hintFocused {
+  opacity: 1;
+  visibility: visible;
+  left: var(--clamp4);
+  top: calc(var(--clamp3) * -1 + 4px);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--white);
+  padding: 4px 8px;
+  line-height: 1.33;
+  border: 1px solid transparent;
+}
+
+.inputWrapper .hintActive {
+  border: 1px solid var(--lines-primary);
+}
+
+/* .inputWrapper .hintError.hintActive {
+  border: 1px solid var(--lines-error);
+} */
+
+.inputWrapper .hintFocused {
+  border: 1px solid var(--lines-brand);
+}
+
+.input {
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  color: var(--text-secondary);
+  border-radius: var(--br-m);
+  padding: var(--clamp3) var(--clamp4);
+  transition: all ease-in-out .2s;
+  width: 100%;
+  outline: none;
+}
+
+.textarea {
+  border-radius: calc(var(--br-m) - var(--br-xs));
+  resize: none;
+}
+
+.multiselect {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+}
+
+.multiselect .hint {
+  top: 9px;
+}
+
+.multiselect .hintActive, .multiselect .hintFocused {
+  top: calc(var(--clamp3) * -1 + 4px);
+}
+
+.topHint {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.select {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectIcon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.numberBlock {
+  text-align: center;
+}
+
+.numberBlock::-webkit-outer-spin-button,
+.numberBlock::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.plusButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.minusButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.listWrapper {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 10px);
+  left: -2px;
+  right: -2px;
+  min-height: 112px;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  box-shadow: var(--bs-1);
+  border-radius: 28px;
+}
+
+.doneIcon {
+  position: sticky;
+  border: none;
+  outline: none;
+  bottom: 5%;
+  left: calc(100% - 60px);
+  line-height: 0;
+  background: var(--background-brand);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: var(--br-m);
+  box-shadow: var(--bs-2);
+}
+
+.doneIcon:hover {
+  background: var(--background-brand-hover);
+}
+
+.multiselectLabel {
+  flex: 1;
+  min-width: 100px;
+}
+
+.multiselectError {
+  border: 1px solid var(--lines-error);
+  box-shadow: none;
+}
+
+.multiselectLabel input {
+  width: 100%;
+  color: var(--text-secondary);
+}
+
+.listWrapperActive {
+  display: block;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  gap: var(--clamp1);
+  padding: var(--clamp2) var(--clamp4);
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  width: 100%;
+  border: none;
+}
+
+.listItem:hover {
+  background: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.listItem.listItemActive {
+  background: var(--background-primary);
+}
+
+.checkIcon {
+  color: var(--white);
+}
+
+.listWrapper .listItem.listItemActive .checkIcon {
+  color: var(--text-highlight);
+}
+
+.listWrapper .listItem.listItemActive {
+  color: var(--text-secondary);
+}
+
+.listWrapper .listItem.listItemActive:before {
+  display: none;
+}
+
+.listItem:hover .checkIcon {
+  color: var(--text-tertiary);
+}
+
+.listItem:hover:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--lines-brand);
+}
+
+.tag {
+  position: relative;
+  font-size: 11px;
+  padding: 4px 20px 4px 10px;
+  border: 1px solid var(--lines-primary);
+  background: var(--white);
+  border-radius: var(--br-s);
+}
+
+.close {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -7px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.multiselect input, .multiselect input:focus {
+  border: 0;
+  outline: none;
+}
+
+.multiselect.focused {
+  position: relative;
+  z-index: 100;
+  border: 1px solid var(--lines-brand);
+}
+
+.input:focus {
+  border: 1px solid var(--lines-brand);
+}
+
+.inputError input, .inputError textarea {
+  border: 1px solid var(--lines-error);
+}
+
+.errorMessage {
+  color: var(--text-error);
+  padding: 3px 0 0 var(--clamp4);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--clamp2);
+}
+
+.checkboxLabel input {
+  width: 20px;
+  height: 20px;
+}
+
+.checkboxText {
+  color: var(--text-primary);
+}
+
+.input {
+  color: var(--text-primary);
+}
+
+.borderRadiusSmall {
+  border-radius: var(--br-s);
+}
+
+.checkboxCampaignLabel input:checked + .checkboxText {
+  color: #7C3AED;
+}
+
+.checkboxCampaignLabel input:checked {
+  accent-color: #7C3AED;
+}
+
+.offerText {
+  color: var(--text-brand);
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .inputLabel {
+    margin-bottom: var(--clamp3);
+  }
+
+  .inputWrapper .hint {
+    padding: 0px 8px;
+  }
+
+  .inputWrapper .hintActive, .inputWrapper .hintFocused {
+    top: calc(var(--clamp3) * -1 + 3px);
+  }
+}

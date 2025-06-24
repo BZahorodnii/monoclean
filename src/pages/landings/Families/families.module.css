@@ -1,0 +1,44 @@
+.imageWrapper {
+  line-height: 0;
+  text-align: center;
+}
+  
+.imageWrapper img {
+  border-radius: var(--br-image);
+}
+
+.subtitle {
+  margin-bottom: var(--clamp6);
+  color: var(--text-secondary);
+}
+
+.areasCarouselWrapper {
+  position: relative;
+  margin-bottom: var(--clamp8);
+}
+
+.generalWrapper {
+  margin-bottom: var(--clamp8);
+}
+
+@media (max-width: 767px) {
+  .imageWrapper {
+    margin-bottom: var(--clamp2);
+  }
+
+  .imageWrapper img {
+    width: 100%;
+  }
+
+  .heroImage {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .heroImage img {
+    max-width: 100%;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+}

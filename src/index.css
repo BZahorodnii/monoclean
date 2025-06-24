@@ -1,0 +1,299 @@
+:root {
+  --max-width: 1200px;
+  --max-width-middle: 1152px;
+  /* Colors */
+  --brand-blue-10: #D9DDFD;
+  --brand-blue-20: #B3BBFB;
+  --brand-blue-30: #8C99F8;
+  --brand-blue-40: #6677F6;
+  --brand-blue-50: #4055F4;
+  --brand-blue-60: #3344C3;
+  --brand-blue-70: #263392;
+  --brand-blue-80: #263392;
+  --brand-blue-90: #0D1131;
+  --gray-5: #F2F2F3;
+  --gray-10: #E5E6E7;
+  --gray-20: #CCCDCF;
+  --gray-30: #B3B3B7;
+  --gray-40: #999A9F;
+  --gray-50: #808186;
+  --gray-60: #66686E;
+  --gray-70: #4D4F56;
+  --gray-80: #33363E;
+  --gray-90: #1A1C26;
+  --gray-95: #000;
+  --black: #000;
+  --white: #fff;
+  --white-layout: #f9f9f9;
+  --red-10: #FFCCDB;
+  --red-50: #FF004D;
+  --orange-10: #FEE4D3;
+  --orange-50: #FA7921;
+  --yellow-10: #FFF2CE;
+  --yellow-50: #FFBC0A;
+  --yellow-70: #efb004;
+  --green-10: #CCEDD9;
+  --green-50: #00953B;
+  --purple-10: #E6D3E9;
+  --purple-50: #732083;
+  --primary: var(--brand-blue-50);
+  --highlight: var(--brand-blue-50);
+  --brand: var(--brand-blue-50);
+  --secondary: var(--gray-60);
+  --tertiary: var(--gray-40);
+  --placeholder: var(--gray-20);
+  --contrast: var(--white);
+  --placeholder: var(--gray-20);
+  --success: var(--green-50);
+  --warning: var(--orange-50);
+  --error: var(--red-50);
+  --brand-hover: var(--brand-blue-60);
+  /* Text color */
+  --text-primary: var(--brand-blue-90);
+  --text-dark-primary: #0B1016;
+  --text-secondary: var(--gray-60);
+  --text-tertiary: var(--gray-40);
+  --text-highlight: var(--brand-blue-50);
+  --text-warning: var(--orange-50);
+  --text-success: var(--green-50);
+  --text-error: var(--red-50);
+  --text-placeholder: var(--gray-20);
+  /* Background */
+  --background-contrast: var(--white);
+  --background-primary: var(--gray-5);
+  --background-secondary: var(--gray-10);
+  --background-tertiary: var(--brand-blue-90);
+  --background-brand: var(--brand-blue-50);
+  --background-brand-hover: var(--brand-blue-60);
+  --background-layout: var(--white-layout);
+  /* Lines */
+  --lines-primary: var(--gray-10);
+  --lines-secondary: var(--gray-30);
+  --lines-tertiary: var(--brand-blue-90);
+  --lines-brand: var(--brand-blue-50);
+  --lines-success: var(--brand-green-50);
+  --lines-warning: var(--orange-50);
+  --lines-error: var(--red-50);
+  /* Font sizes */
+  --primary-h1: clamp(2rem, 1.2761rem + 3.0888vw, 3.5rem);
+  --headline-2: clamp(1.75rem, 1.388rem + 1.5444vw, 2.5rem);
+  --headline-3: clamp(1.125rem, 1.0647rem + 0.2574vw, 1.25rem);
+  --text-l: clamp(1rem, 0.9397rem + 0.2574vw, 1.125rem);
+  --text-m: clamp(0.875rem, 0.8147rem + 0.2574vw, 1rem);
+  --text-s: clamp(0.75rem, 0.6897rem + 0.2574vw, 0.875rem);
+  --text-uppercase: clamp(0.625rem, 0.5647rem + 0.2574vw, 0.75rem);
+  /* Border radius */
+  --br-xl: 72px;
+  --br-l: 64px;
+  --br-m: 36px;
+  --br-s: 16px;
+  --br-xs: 8px;
+  --br-image: 58px;
+  --br-in: 28px;
+  /* Sizes */
+  --clamp1: 10px;
+  --clamp2: 12px;
+  --clamp3: 16px;
+  --clamp4: 24px;
+  --clamp5: 32px;
+  --clamp6: 44px;
+  --clamp7: 64px;
+  --clamp8: 80px;
+  --clamp9: 96px;
+  --clamp10: 120px;
+  --clamp11: 160px;
+  /* Box shadow */
+  --bs-1: 0px 4px 16px 0px rgba(0, 0, 0, 0.02);
+  --bs-2: 0px 8px 20px 0px rgba(64, 85, 244, 0.25);
+  --bs-3: 0px 0px 20px 0px rgba(64, 85, 244, 0.25);
+  /* Letter spasing */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+html,
+body {
+  font-family: Satoshi-Regular, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(249, 249, 249, 1);
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.h1 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--primary-h1);
+  line-height: 1.071;
+  letter-spacing: -0.018em;
+  font-weight: 500;
+}
+
+.h2 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--headline-2);
+  line-height: 1.1;
+  letter-spacing: -0.009em;
+  font-weight: 500;
+}
+
+.h3 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--headline-3);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.textL-400 {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: var(--text-l);
+  line-height: 1.556;
+  font-weight: 400;
+}
+
+.textL-500 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-l);
+  line-height: 1.556;
+  font-weight: 500;
+}
+
+.textM-400 {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: var(--text-m);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.textM-500 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-m);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.textM-600 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-m);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.textS-400 {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: var(--text-s);
+  line-height: 1.571;
+  font-weight: 400;
+}
+
+.textS-500 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-s);
+  line-height: 1.571;
+  font-weight: 500;
+}
+
+.textS-600 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-s);
+  line-height: 1.571;
+  font-weight: 500;
+}
+
+.text-copyright {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.17px;
+  font-weight: 400;
+}
+
+.uppercase-500 {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-uppercase);
+  letter-spacing: 2px;
+  line-height: 1.167;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.container {
+  max-width: var(--max-width);
+  padding: 0 var(--clamp4);
+  margin: 0 auto var(--clamp4);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+  z-index: 100;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.carousel-wrapper .react-multiple-carousel__arrow--left {
+  left: -40px;
+}
+
+.carousel-wrapper .react-multiple-carousel__arrow--right {
+  right: -40px;
+}
+
+@media (max-width: 787px) {
+  :root {
+    /* Border radius */
+    --br-xl: 48px;
+    --br-l: 40px;
+    --br-m: 24px;
+    --br-s: 8px;
+    --br-xs: 4px;
+    --br-image: 32px;
+    --br-in: 16px;
+    /* Sizes */
+    --clamp1: 4px;
+    --clamp2: 8px;
+    --clamp3: 12px;
+    --clamp4: 20px;
+    --clamp5: 24px;
+    --clamp6: 28px;
+    --clamp7: 32px;
+    --clamp8: 36px;
+    --clamp9: 40px;
+    --clamp10: 48px;
+    --clamp11: 72px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}

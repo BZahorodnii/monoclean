@@ -1,0 +1,16 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--text-tertiary);
+  margin-bottom: var(--clamp6) !important;
+}
+
+.link {
+  color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    overflow-wrap: break-word;
+  }
+}

@@ -1,0 +1,32 @@
+.spaces {
+  padding: 0 var(--clamp7);
+}
+
+.title {
+  margin-bottom: var(--clamp4);
+}
+
+.text {
+  margin-bottom: 44px;
+  color: var(--text-secondary);
+}
+
+.hint {
+  color: var(--highlight);
+  margin-bottom: var(--clamp4);
+  text-transform: uppercase;
+}
+
+.titleExtraSpace {
+  margin-bottom: var(--clamp6);
+}
+
+@media (max-width: 787px) {
+  .spaces {
+    padding: 0 var(--clamp3);
+  }
+
+  .text {
+    margin-bottom: 28px;
+  }
+}

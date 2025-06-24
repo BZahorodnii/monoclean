@@ -1,0 +1,509 @@
+.wrapper {
+  max-width: var(--max-width);
+  padding: 0 var(--clamp4);
+  margin: 0 auto var(--clamp4);
+  color: var(--text-primary);
+}
+
+.wrapperIn {
+  border: 3px solid var(--lines-brand);
+  border-radius: var(--br-m);
+  background-color: #F2F3FE;
+  padding: 5px;
+}
+
+.title {
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: var(--clamp3);
+}
+
+.titleDiscount {
+  color: var(--text-highlight);
+}
+
+.discount {
+  font-size: 90px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.discount span {
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  flex: 1;
+  width: 50%;
+}
+
+.form {
+  border-radius: var(--br-in);
+  background-color: #E6E7F1;
+  padding: var(--clamp7);
+  position: relative;
+}
+
+.formTitle {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--clamp6);
+}
+
+.formTitleDiscount {
+  color: var(--text-success);
+}
+
+.priceContainer {
+  flex: 1;
+}
+
+.priceContainerIn {
+  padding: var(--clamp7);
+}
+
+.priceTitle {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.promoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.priceRow {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px dashed var(--lines-secondary);
+}
+
+.promoRow {
+  padding-bottom: 12px;
+}
+
+.priceRowIn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceText {
+  font-size: 22px;
+  line-height: 1;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.priceValue {
+  font-size: 22px;
+  line-height: 1;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.formContainerFlex {
+  display: flex;
+  gap: var(--clamp3);
+}
+
+.promoCodeRow {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00000012;
+  /* padding: 10px 12px; */
+  border-radius: var(--br-xs);
+}
+
+.input {
+  padding: 10px 12px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-primary);
+  font-weight: 500;
+  width: 100%;
+  border-radius: var(--br-xs);
+  border: 1px solid var(--lines-secondary);
+  background-color: var(--white);
+}
+
+.inputInactive:focus {
+  outline: none;
+}
+
+.inputInactive {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.promoCodeText {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.promoCodeButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-highlight);
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.downloadContainer {
+  background-color: var(--background-brand);
+  padding: var(--clamp5);
+  border-radius: 32px;
+  margin-top: 40px;
+}
+
+.downloadContainerCampaign {
+  background-color: var(--background-brand);
+  padding: var(--clamp4);
+  border-radius: 32px;
+  margin-top: 40px;
+}
+.inputWrapper {
+  flex: 1;
+  margin-bottom: var(--clamp4);
+}
+
+.lastInputWrapper {
+  margin-bottom: var(--clamp3);
+}
+
+.checkboxWrapper {
+  margin-bottom: var(--clamp5);
+}
+
+.buttonWrapper {
+  margin-bottom: 0;
+}
+
+.price {
+  margin-bottom: var(--clamp2);
+}
+
+.priceValueNumber {
+  font-weight: 700;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}
+
+.downloadTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.pricePromo {
+  border: 1px solid var(--lines-primary);
+  margin-bottom: var(--clamp2);
+  margin-top: var(--clamp2);
+  border-radius: var(--br-xs);
+  padding: 3px;
+  font-size: var(--text-s);
+  font-weight: 500;
+}
+
+.discountPriceValue {
+  color: var(--text-success);
+}
+
+.timer {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: var(--clamp5);
+}
+
+.timerIn {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  background-color: var(--red-10);
+  padding: 5px var(--clamp2);
+  border-radius: var(--br-m);
+  animation: pulse 2s infinite;
+}
+
+.formCampaign {
+  /* padding-top: var(--clamp8);
+  padding-bottom: var(--clamp8); */
+}
+
+.campaignHint {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--text-secondary);
+  margin-top: var(--clamp4);
+  margin-bottom: var(--clamp1);
+  text-align: center;
+}
+
+.campaignHint2 {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--clamp10);
+}
+
+.subtitleCampaign {
+  margin-bottom: 0;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--clamp4);
+  gap: var(--clamp4);
+}
+
+.bannerIn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--clamp2) var(--clamp4);
+  background: linear-gradient(to right, rgb(60, 85, 239), rgb(235, 92, 139));
+  border-radius: 32px;
+  margin-top: var(--clamp4);
+}
+
+.bannerLeftBlock {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.bannerRightBlock {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.bannerRightBlockText {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.bannerRating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.bannerRatingStars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.bannerRatingText {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.priceRowCampaign {
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.downloadContainerCampaign {
+  margin-top: 20px;
+}
+
+.checkboxWrapperCampaign {
+  margin-bottom: 0;
+}
+
+.priceTitleCampaign {
+  margin-bottom: 14px;
+}
+
+.downloadTitleCampaign {
+  margin-bottom: 12px;
+}
+
+.campaignEditAnytime {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: left;
+  margin-top: 12px;
+}
+
+.downloadContainerCampaignSpace {
+  margin-top: 50px;
+}
+
+.bannerRatingTextCentered {
+  text-align: center;
+}
+
+.bannerRatingCentered {
+  align-items: center;
+}
+
+.campaignHint2Short {
+  margin-bottom: var(--clamp8);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.timerItem {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .form {
+    padding: var(--clamp4);
+  }
+
+  .priceContainerIn {
+    padding:  var(--clamp4);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .form {
+    padding: var(--clamp3);
+  }
+
+  .priceContainer {
+    width: 100%;
+  }
+
+  .priceContainerIn {
+    padding: var(--clamp3);
+  }
+
+  .downloadContainerCampaignSpace {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .formContainerFlex {
+    flex-direction: column;
+    gap: 0;
+  }
+  .priceTitle {
+    margin-bottom: 5px;
+  }
+  .formContainer {
+    margin-bottom: var(--clamp5);
+  }
+  .priceContainerIn {
+    padding: var(--clamp2);
+  }
+  .downloadContainer {
+    padding: var(--clamp4);
+    border-radius: 18px;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .bannerIn {
+    width: 100%;
+  }
+
+  .bannerRating {
+    align-items: center;
+  }
+
+  .bannerIn {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .bannerRightBlockText {
+    text-align: left;
+  }
+
+  .bannerLeftBlock {
+    font-size: 30px;
+  }
+}

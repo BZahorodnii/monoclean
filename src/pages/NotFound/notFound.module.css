@@ -1,0 +1,18 @@
+/* Not Found Page */
+.notFoundWrapper {
+  text-align: center;
+  margin-bottom: var(--clamp10) !important;
+}
+
+.notFoundImage {
+  max-width: 670px;
+  margin: 0 auto var(--clamp7);
+}
+
+.notFoundTitle {
+  margin-bottom: var(--clamp3);
+}
+
+.notFoundText {
+  margin-bottom: var(--clamp6);
+}

@@ -1,0 +1,133 @@
+.imageWrapper, .homeImageWrapper {
+  line-height: 0;
+}
+
+.homeContainer {
+  margin-bottom: var(--clamp8);
+}
+
+.imageWrapper img {
+  border-radius: var(--br-image);
+}
+
+.mainImage {
+  max-width: 426px;
+}
+
+.wrapper .downloadContainer {
+  text-align: center;
+  padding-top: var(--clamp6);
+  margin: 0 auto var(--clamp9);
+}
+
+.downloadRow {
+  display: flex;
+  gap: var(--clamp2);
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--clamp2);
+  padding: var(--clamp2);
+  border-radius: var(--br-image);
+  background-color: var(--white);
+  border-radius: var(--br-s);
+  border: 1px solid var(--lines-primary);
+  cursor: pointer;
+}
+
+.downloadItemContent {
+  text-align: left;
+  flex: 1;
+}
+
+.downloadTitle {
+  margin-bottom: var(--clamp6);
+  color: var(--text-primary);
+}
+
+.downloadItemSubtitle {
+  margin-bottom: 5px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.downloadText {
+  color: var(--text-secondary);
+}
+/* Not Found Page */
+.notFoundWrapper {
+  text-align: center;
+  margin-bottom: var(--clamp10);
+}
+
+.notFoundImage {
+  max-width: 670px;
+  margin: 0 auto var(--clamp7);
+}
+
+.notFoundTitle {
+  margin-bottom: var(--clamp3);
+}
+
+.notFoundText {
+  margin-bottom: var(--clamp6);
+}
+
+.imageWrapperHeader img {
+  width: calc(100% - 100px);
+}
+
+.generalWrapper {
+  margin-bottom: var(--clamp8);
+}
+
+@media (max-width: 767px) {
+  .homeImageWrapper {
+    margin-bottom: var(--clamp10);
+  }
+
+  .imageWrapper {
+    margin-bottom: var(--clamp7);
+  }
+
+  .imageWrapper img {
+    width: 100%;
+  }
+
+  .imageWrapperHeader {
+    text-align: center;
+  }
+
+  .imageWrapperHeader img {
+    max-width: 70%;
+  }
+
+  .downloadRow {
+    flex-direction: column;
+  }
+
+  .downloadItem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .downloadItem {
+    flex-direction: column;
+    padding: var(--clamp3);
+  }
+
+  .downloadItemArrow {
+    display: none;
+  }
+
+  .downloadItemContent {
+    text-align: center;
+  }
+}

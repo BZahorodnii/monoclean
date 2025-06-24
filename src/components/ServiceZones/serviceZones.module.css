@@ -1,0 +1,35 @@
+.container {
+  margin-bottom: var(--clamp11);
+}
+
+.title {
+  font-family: Satoshi-Bold, sans-serif;
+  font-size: 45px;
+  line-height: 49px;
+  color: var(--black);
+  margin-bottom: var(--clamp3);
+  text-align: center;
+}
+
+.subtitle {
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: var(--clamp4);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--clamp7);
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-bottom: var(--clamp7);
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  
+}

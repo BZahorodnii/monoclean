@@ -1,0 +1,42 @@
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+}
+
+.cardElementWrapper {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.quoteTitle {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.priceLine {
+  display: flex;
+  justify-content: space-between;
+  font-family: Satoshi-Regular, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 500;
+  color: #000;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.green {
+  color: var(--text-success)
+}
+
+.priceSeparator {
+  border-bottom: 1px dashed var(--lines-secondary);
+}

@@ -1,0 +1,258 @@
+.aboutWrapper .wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  gap: 40px;
+  margin: 0 auto var(--clamp10);
+}
+
+.header {
+  margin-bottom: var(--clamp7) !important;
+}
+
+.title {
+  color: var(--text-primary);
+  margin-bottom: var(--clamp3);
+}
+
+.text {
+  color: var(--text-tertiary);
+}
+
+.wrapperMenu {
+  position: relative;
+  width: 288px;
+}
+
+.contentTitle {
+  color: var(--text-primary);
+  margin-bottom: var(--clamp5);
+}
+
+.contentText {
+  color: var(--text-primary);
+}
+
+.extraSpace {
+  margin-bottom: var(--clamp3);
+}
+
+.separator {
+  margin: var(--clamp7) 0;
+}
+
+.separator hr {
+  border-top: 1px solid var(--lines-primary);
+  border-left: none;
+  border-bottom: none;
+}
+
+.roadmapTimeline {
+  position: relative;
+}
+
+.roadmapRow {
+  position: relative;
+}
+
+.roadmapRowIn {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.roadmapRowIn > div {
+  width: 50%;
+}
+
+.roadmapCard {
+  position: relative;
+  background: var(--white);
+  padding: var(--clamp4);
+  border-radius: var(--br-s);
+  box-shadow: var(--bs-1);
+}
+
+.roadmapCardRight {
+  margin-left: calc(var(--clamp4) + var(--clamp2));
+}
+
+.roadmapCardLeft {
+  margin-right: calc(var(--clamp4) + var(--clamp2));
+}
+
+.dot {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--white);
+  border-radius: var(--br-m);
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  box-shadow: 0px 8px 20px 0px #4055F440;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  background: var(--brand-blue-50);
+  border-radius: var(--br-m);
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+}
+
+.roadmapCardRight::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid var(--white);
+}
+
+.roadmapCardLeft::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-left:10px solid var(--white);
+}
+
+.roadmapDates {
+  color: var(--text-tertiary);
+  margin-bottom: var(--clamp3);
+}
+
+.roadmapTitle {
+  color: var(--text-primary);
+  margin-bottom: var(--clamp3);
+}
+
+.roadmapText {
+  position: relative;
+  color: var(--black);
+  padding-left: calc(var(--clamp2) + 8px)
+}
+
+.roadmapText::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--br-s);
+  background: var(--text-highlight);
+}
+
+.roadmapStatus {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: var(--clamp3);
+}
+
+.roadmapStatusWarning {
+  color: var(--text-warning);
+}
+
+.roadmapStatusDone {
+  color: var(--text-success);
+}
+
+.roadmapProgress {
+  position: absolute;
+  width: 6px;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+  border-radius: var(--br-s);
+  background: var(--lines-secondary);
+}
+
+.roadmapProgress::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  left: 50%;
+  height: 63%;
+  bottom: 0;
+  margin-left: -3px;
+  border-radius: var(--br-s);
+  background: var(--lines-brand);
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    gap: 20px;
+  }
+  
+  .wrapperMenu {
+    position: relative;
+    width: 200px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .wrapperMenu {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .roadmapProgress {
+    width: 6px;
+    left: 12px;
+  }
+  
+  .roadmapProgress::after {
+    width: 6px;
+    left: 3px;
+  }
+
+  .dot {
+    left: 12px;
+    margin: -12px 0 0 -12px;
+  }
+  
+  .dot::before {
+    left: 12px;
+    margin: -6px 0 0 -6px;
+  }
+
+  .roadmapRowIn {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .roadmapRowIn > div {
+    width: 100%;
+  }
+
+  .roadmapCardRight, .roadmapCardLeft {
+    margin-left: var(--clamp10);
+    margin-right: 0;
+  }
+  
+  .roadmapCardLeft::before {
+    left: -10px;
+    right: inherit;
+    border-right: 10px solid var(--white);
+    border-left: 0;
+  }
+}

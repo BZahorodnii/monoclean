@@ -1,0 +1,121 @@
+.button {
+  position: relative;
+  padding: var(--clamp3) var(--clamp5);
+  border-radius: var(--br-m);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all ease-in-out .2s;
+}
+
+.default {
+  box-shadow: var(--bs-2);
+  background: var(--background-brand);
+  color: var(--white);
+}
+
+.button[disabled], .button[disabled]:hover {
+  cursor: default;
+  background: var(--background-secondary);
+  box-shadow: none;
+}
+
+.default:hover {
+  box-shadow: none;
+  background: var(--background-brand-hover);
+}
+
+.dark {
+  background: var(--background-tertiary);
+  border: 1px solid var(--background-tertiary);
+  color: var(--white);
+}
+
+.light {
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  color: var(--text-primary);
+}
+
+.yellow {
+  background: var(--yellow-70);
+  border: 1px solid var(--yellow-70);
+  color: var(--white);
+}
+
+.disabled {
+  background: var(--white);
+  border: 1px solid var(--lines-primary);
+  color: var(--text-tertiary);
+  cursor: default;
+}
+
+.button.logoBtn {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: var(--text-s);
+  line-height: 1.571;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.logo {
+  margin-right: 12px;
+  line-height: 0;
+}
+
+.linkButton {
+  display: inline-block;
+}
+
+[disabled].loading, [disabled].loading:hover {
+  padding-left: calc(var(--clamp5) + 34px) !important;
+  background: var(--brand-blue-40);
+}
+
+[disabled].done, [disabled].done:hover {
+  padding-left: calc(var(--clamp5) + 34px);
+  background: var(--green-50);
+}
+
+.absoluteIcon {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  left: var(--clamp5);
+}
+
+.rightIcon {
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .fullWidthMobile {
+    width: 100%;
+  }
+
+  .button {
+    margin-bottom: var(--clamp3);
+  }
+
+  .logoBtn {
+    padding: 12px;
+  }
+
+  .logoBtn .textBtn {
+    display: none;
+  }
+
+  .logoBtn .logo {
+    margin-right: 0;
+  }
+  
+  [disabled].done, [disabled].done:hover, [disabled].loading, [disabled].loading:hover {
+    padding-left: var(--clamp5);
+  }
+
+  .button.mobileSmall {
+    padding: var(--clamp2) var(--clamp3);
+  }
+  
+}

@@ -1,0 +1,39 @@
+.menuWrapper {
+  position: sticky;
+  top: 20px;
+  width: 240px;
+  margin: 0 24px 0 0;
+  background: var(--white);
+  border-radius: var(--br-m);
+  border: 1px solid var(--lines-primary);
+  padding: 8px;
+}
+
+.menuLinkWrapper {
+  padding: 16px 20px;
+}
+
+.menuLink {
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+
+.menuLink:hover {
+  color: var(--text-highlight);
+}
+
+@media (max-width: 991px) {
+  .menuWrapper {
+    position: sticky;
+    top: 20px;
+    width: 180px;
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menuWrapper {
+    display: none;
+  }
+}

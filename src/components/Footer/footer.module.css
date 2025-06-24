@@ -1,0 +1,132 @@
+.footer {
+  padding: 0 var(--clamp3) var(--clamp3);
+}
+
+.footerIn {
+  background: var(--background-primary);
+  border-radius: var(--br-l);
+  padding-bottom: var(--clamp8);
+  border: 1px solid var(--lines-primary);
+}
+
+.footerTop {
+  max-width: var(--max-width-middle);
+  margin: 0 auto;
+  padding: var(--clamp8) var(--clamp4) var(--clamp6);
+}
+
+.footerTopIn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: var(--clamp6);
+}
+
+.logo {
+  margin-bottom: var(--clamp6);
+  line-height: 0;
+}
+
+.subscribeTitle {
+  margin-bottom: var(--clamp4);
+  color: var(--text-primary);
+}
+
+.subscribePolicy {
+  color: var(--text-secondary);
+}
+
+.separator {
+  border-top: 1px solid var(--lines-primary);
+  border-left: none;
+  border-bottom: none;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width-middle);
+  padding: 0 var(--clamp4);
+  margin: 0 auto;
+}
+
+.subscribeWrapper {
+  max-width: 528px;
+}
+
+.copyright {
+  font-family: Satoshi-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 1.428;
+  color: var(--text-primary);
+  letter-spacing: 0.17px;
+}
+
+.linksWrapper {
+  display: flex;
+}
+
+.links {
+  padding: 0 40px;
+}
+
+.link {
+  color: var(--text-primary);
+  padding: var(--clamp2) var(--clamp3);
+  white-space: nowrap;
+}
+
+.link a, .link button {
+  transition: all ease-in-out .2s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.link a:hover, .link button:hover {
+  color: var(--text-highlight);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.socialWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--clamp2);
+}
+
+@media (max-width: 767px) {
+  .subscribeWrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--clamp9);
+  }
+
+  .footerTopIn {
+    flex-direction: column;
+  }
+
+  .linksWrapper {
+    justify-content: space-between;
+    max-width: 400px;
+  }
+
+  .links {
+    padding: 0;
+  }
+
+  .link {
+    padding: var(--clamp2) var(--clamp3) var(--clamp2) 0;
+  }
+
+  .footerBottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--clamp3);
+  }
+}
